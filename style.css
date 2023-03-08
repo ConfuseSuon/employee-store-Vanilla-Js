@@ -1,6 +1,6 @@
 body {
   color: #566787;
-  background: #f5f5f5;
+  background: #1f8a70;
   font-family: "Varela Round", sans-serif;
   font-size: 13px;
 }
@@ -102,39 +102,22 @@ table.table .avatar {
   vertical-align: middle;
   margin-right: 10px;
 }
-.pagination {
-  float: right;
-  margin: 0 0 5px;
+
+.bi-person-check {
+  margin-left: 16px;
+  color: rgb(7, 110, 7);
 }
-.pagination li a {
-  border: none;
-  font-size: 13px;
-  min-width: 30px;
-  min-height: 30px;
-  color: #999;
-  margin: 0 2px;
-  line-height: 30px;
-  border-radius: 2px !important;
-  text-align: center;
-  padding: 0 6px;
+
+.bi-person-x {
+  margin-left: 16px;
+  color: rgb(158, 6, 6);
 }
-.pagination li a:hover {
-  color: #666;
+
+.fa-user-hair-long {
+  margin-left: 16px;
+  color: rgb(158, 6, 6);
 }
-.pagination li.active a,
-.pagination li.active a.page-link {
-  background: #03a9f4;
-}
-.pagination li.active a:hover {
-  background: #0397d6;
-}
-.pagination li.disabled i {
-  color: #ccc;
-}
-.pagination li i {
-  font-size: 16px;
-  padding-top: 6px;
-}
+
 .hint-text {
   float: left;
   margin-top: 10px;
@@ -225,4 +208,66 @@ table.table .avatar {
 }
 .modal form label {
   font-weight: normal;
+}
+
+svg {
+  width: 102px;
+  height: 102px;
+}
+* {
+  box-sizing: border-box;
+}
+.preloader {
+  position: absolute;
+  width: 102px;
+  height: 102px;
+  left: 50%;
+  top: 50%;
+  min-height: 102px;
+  transform: translateX(-50%) translateY(-50%);
+}
+.preloader .small-circle {
+  stroke-dasharray: 210;
+  stroke-dashoffset: 210;
+  transform-origin: 50%;
+  animation: 1s draw-small infinite alternate;
+}
+@keyframes draw-small {
+  0% {
+    stroke-dashoffset: 0;
+    transform: rotate(0deg);
+  }
+  100% {
+    stroke-dashoffset: 210;
+    transform: rotate(360deg);
+  }
+}
+.preloader .big-circle {
+  stroke-dasharray: 240;
+  stroke-dashoffset: 240;
+  transform-origin: 50%;
+  animation: 1s draw-big infinite alternate 0.5s;
+}
+@keyframes draw-big {
+  0% {
+    stroke-dashoffset: 0;
+    transform: rotateY(180deg) rotate(360deg);
+  }
+  100% {
+    stroke-dashoffset: 240;
+    transform: rotateY(180deg) rotate(0deg);
+  }
+}
+
+.status {
+  display: flex;
+  flex-direction: row;
+}
+
+.statusInactive {
+  margin-left: 20px;
+}
+
+.form-check-label {
+  font-size: 12px;
 }

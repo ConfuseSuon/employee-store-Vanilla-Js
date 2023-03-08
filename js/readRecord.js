@@ -1,12 +1,16 @@
 import { BASE_URL, getOptions } from "./apiInfo.js";
 import { domSelection } from "./domSelection.js";
+import { preLoader, stopPreLoader } from "./pageLoader.js";
+
 const domSelector = new domSelection();
 
 export const readRecordFetching = async () => {
+  preLoader();
   let apiResponse = await fetch(BASE_URL + "public/v2/users/", getOptions);
   let apiResult = await apiResponse.json();
   console.log(apiResult);
   readRecord(apiResult);
+  stopPreLoader();
 };
 
 export const readRecord = (apiResult) => {
@@ -18,7 +22,12 @@ export const readRecord = (apiResult) => {
     <td>${name}</td>
     <td>${email}</td>
     <td>${gender}</td>
-    <td>${status}</td>
+    <td>${
+      status == "active"
+        ? "<i class='bi bi-person-check'></i>"
+        : '<i class="bi bi-person-x"></i>'
+    }
+   </td>
     <td>
       <a href="#editEmployeeModal" class="edit" onclick="displayingClickedRecordDetails(${id})" data-toggle="modal"
         ><i

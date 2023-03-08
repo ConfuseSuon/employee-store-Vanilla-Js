@@ -1,5 +1,6 @@
 export class domSelection {
   constructor() {
+    this.preLoader = document.querySelector(".preloader");
     this.tableBody = document.getElementById("parentNode");
     this.formForCreate = document.getElementById("createForm");
     this.createName = document.getElementById("cName");
