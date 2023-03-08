@@ -103,21 +103,6 @@ table.table .avatar {
   margin-right: 10px;
 }
 
-.bi-person-check {
-  margin-left: 16px;
-  color: rgb(7, 110, 7);
-}
-
-.bi-person-x {
-  margin-left: 16px;
-  color: rgb(158, 6, 6);
-}
-
-.fa-user-hair-long {
-  margin-left: 16px;
-  color: rgb(158, 6, 6);
-}
-
 .hint-text {
   float: left;
   margin-top: 10px;
@@ -270,4 +255,22 @@ svg {
 
 .form-check-label {
   font-size: 12px;
+}
+
+.bi-person-check {
+  margin-left: 16px;
+  color: rgb(7, 110, 7);
+}
+
+.bi-person-x {
+  margin-left: 16px;
+  color: rgb(158, 6, 6);
+}
+
+.fa-solid {
+  margin-left: 16px;
+  color: black;
+}
+.fa-user {
+  size: 1px;
 }

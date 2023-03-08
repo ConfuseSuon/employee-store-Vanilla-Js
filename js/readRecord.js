@@ -21,7 +21,11 @@ export const readRecord = (apiResult) => {
     tempData += `<tr><td id = "ff">${id}</td>
     <td>${name}</td>
     <td>${email}</td>
-    <td>${gender}</td>
+    <td>${
+      gender == "male"
+        ? '<i class="fa-solid fa-person"></i>'
+        : '<i class="fa-sharp fa-solid fa-person-dress"></i>'
+    }</td>
     <td>${
       status == "active"
         ? "<i class='bi bi-person-check'></i>"
